@@ -1,0 +1,1 @@
+import API from './axiosInstance'; export const signupUser = (payload) => API.post('/auth/register', payload).then(r=>r.data); export const loginUser = (payload) => API.post('/auth/login', payload).then(r=>r.data);
