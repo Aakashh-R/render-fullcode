@@ -20,7 +20,7 @@ console.log('MONGO_URI =', process.env.MONGO_URI);
 
 const app = express();
 app.use(cors({ origin: [
-  "https://render-frontned.onrender.com"
+  "https://client-ouj2.onrender.com/"
 ] }));
 app.use(express.json());
 
