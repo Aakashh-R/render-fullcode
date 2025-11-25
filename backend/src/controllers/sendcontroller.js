@@ -1,6 +1,6 @@
 // controllers/sendController.js
 import { sendMail } from "../utils/emailService.js";
-import Template from "../models/Template.js"; // if you store templates in DB
+import Template from "../models/template.js"; // if you store templates in DB
 import { renderTemplate } from "../utils/renderTemplate.js"; // your render util
 import validator from "validator";
 import asyncHandler from "express-async-handler";
