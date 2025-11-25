@@ -55,7 +55,7 @@ async function start() {
     // changed to /api/send to avoid duplicate mount path — change if you meant something else
     app.use('/api/send', sendRoutes);
 
-app.use("/api/templates", debugTemplates);
+app.use("/", debugTemplates);
 
 
     // 5) start listening
