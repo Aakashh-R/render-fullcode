@@ -19,7 +19,9 @@ dotenv.config({ path: path.join(__dirname, '.env') });
 console.log('MONGO_URI =', process.env.MONGO_URI);
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: [
+  "https://render-frontned.onrender.com"
+] }));
 app.use(express.json());
 
 // Optional: basic health route available regardless of DB (useful for k8s/liveness)
@@ -60,7 +62,7 @@ app.use("/", debugTemplates);
 
     // 5) start listening
     const PORT = process.env.PORT || 5001;
-    const server = app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server listening on ${PORT}`));
 
     // optional: handle graceful shutdown
     const shutdown = async signal => {
