@@ -12,6 +12,10 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md,html}\""
     
   },
+  "engines": {
+  "node": "18.x"
+},
+
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
     "bcryptjs": "^3.0.3",
