@@ -18,8 +18,13 @@
     "react-router-dom": "^6.23.1"
   },
   "engines": {
-  "node": ">=20.0.0 <21",
+ "engines": {
+  "node": "20.24.0",
+
   "npm": ">=10.0.0"
+}
+
+  
 },
 
   "devDependencies": {
