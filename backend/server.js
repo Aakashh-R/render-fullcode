@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 
 import connectDB from './src/config/db.js';
 import { verifyTransporter } from './src/utils/emailService.js';
+    import debugTemplates from "./src/routes/debugTemplates.js";
 
 // Fix __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -53,6 +54,9 @@ async function start() {
     app.use('/api/templates', templateRoutes);
     // changed to /api/send to avoid duplicate mount path — change if you meant something else
     app.use('/api/send', sendRoutes);
+
+app.use("/api/templates", debugTemplates);
+
 
     // 5) start listening
     const PORT = process.env.PORT || 5001;
